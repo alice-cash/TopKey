@@ -50,7 +50,11 @@ namespace TopKey.Frames
         private Point LastMousePos;
         private bool MouseDown = false;
 
-        static ProcessConfigure Info;
+        private bool SettingHotkey = false;
+
+        public static ProcessConfigure Info;
+        public static HideFrame Hidey;
+        private Color OrignalBackColor;
 
         private List<KeyboardProfile> Profiles;
         //static ProcessHooks Hooks;
@@ -64,6 +68,7 @@ namespace TopKey.Frames
 
         private void BroadcastSetup_Load(object sender, EventArgs e)
         {
+            OrignalBackColor = SetHotkey.BackColor;
             this.Top = -(this.Height) + this.ExpandContract.Height;
             Contracted = false;
             this.ExpandContract.Text = "vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv";
@@ -75,10 +80,41 @@ namespace TopKey.Frames
             Info = new ProcessConfigure();
             Info.ProcessListChanged += new EventHandler(Info_ProcessListChanged);
             Info.Show();
+            Hidey = new HideFrame();
+            Hidey.Show();
+            ProcessHooks.KeyStateChanged += new EventHandler<KeyStateChangesArgs>(ProcessHooks_KeyStateChanged);
             ProcessHooks.init(Info.SelectedProcess, Profiles[ProfileList.SelectedIndex]);
+
 
             this.TopMost = false;
             this.TopMost = true;
+        }
+
+        void ProcessHooks_KeyStateChanged(object sender, KeyStateChangesArgs e)
+        {
+            if (e.PressedKeys.Length == 2)
+            { }
+            for(int i = 0; i < Profiles.Count; i++)
+            {
+                if (SameKeys(Profiles[i].Hotkey, e.PressedKeys))
+                {
+                    ProfileList.SelectedIndex = i;
+                    new Popup("'" + Profiles[i].Name + "' Selected.").Show();
+                    return;
+                }
+            }
+        }
+
+        bool SameKeys(Win32.Keys[] set1, Win32.Keys[] set2)
+        {
+            if (set1 == null) return false;
+            foreach (Win32.Keys key in set1)
+                if (!set2.Contains(key))
+                    return false;
+            foreach (Win32.Keys key in set2)
+                if (!set1.Contains(key))
+                    return false;
+            return true;
         }
 
         void Info_ProcessListChanged(object sender, EventArgs e)
@@ -92,7 +128,14 @@ namespace TopKey.Frames
                 return;
 
             KeyboardProfile TmpKP = keyboard1.GetProfile();
-            Profiles[ProfileList.SelectedIndex].SelectedKeys = TmpKP.SelectedKeys;
+            if (SettingHotkey)
+            {
+                Profiles[ProfileList.SelectedIndex].Hotkey = TmpKP.SelectedKeys;
+            }
+            else
+            {
+                Profiles[ProfileList.SelectedIndex].SelectedKeys = TmpKP.SelectedKeys;
+            }
             ProcessHooks.ChangeProfile(Profiles[ProfileList.SelectedIndex]);
         }
 
@@ -217,7 +260,7 @@ namespace TopKey.Frames
             }
 
 
-            keyboard1.SetProfile(Profiles[ProfileList.SelectedIndex]);
+            keyboard1.SetProfile(Profiles[ProfileList.SelectedIndex], SettingHotkey);
             ProcessHooks.ChangeProfile(Profiles[ProfileList.SelectedIndex]);
 
         }
@@ -293,7 +336,7 @@ namespace TopKey.Frames
         {
             if (ProfileList.SelectedIndex != -1)
             {
-                keyboard1.SetProfile(Profiles[ProfileList.SelectedIndex]);
+                keyboard1.SetProfile(Profiles[ProfileList.SelectedIndex], SettingHotkey);
                 ProcessHooks.ChangeProfile(Profiles[ProfileList.SelectedIndex]);
             }
         }
@@ -319,7 +362,7 @@ namespace TopKey.Frames
                     if (ProfileList.Items.Count > 0)
                     {
                         ProfileList.SelectedIndex = 0;
-                        keyboard1.SetProfile(Profiles[ProfileList.SelectedIndex]);
+                        keyboard1.SetProfile(Profiles[ProfileList.SelectedIndex], SettingHotkey);
                         ProcessHooks.ChangeProfile(Profiles[ProfileList.SelectedIndex]);
 
                     }
@@ -342,10 +385,19 @@ namespace TopKey.Frames
             SaveProfiles();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void SetHotkey_Click(object sender, EventArgs e)
         {
+            SettingHotkey = !SettingHotkey;
+            keyboard1.SetProfile(Profiles[ProfileList.SelectedIndex], SettingHotkey);
+            SetHotkey.BackColor = SettingHotkey ? Color.Red :  OrignalBackColor;
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Hidey.Visible = true;
+        }
+
 
 
 

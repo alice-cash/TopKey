@@ -40,6 +40,7 @@ namespace TopKey.Data
     {
         public string Name;
         public Keys[] SelectedKeys;
+        public Keys[] Hotkey;
 
         public override string ToString()
         {

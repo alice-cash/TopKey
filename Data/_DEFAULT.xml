@@ -20,4 +20,8 @@
     <Keys>N1</Keys>
     <Keys>OEM3</Keys>
   </SelectedKeys>
+  <Hotkey>
+    <Keys>F1</Keys>
+    <Keys>LeftShift</Keys>
+  </Hotkey>
 </KeyboardProfile>

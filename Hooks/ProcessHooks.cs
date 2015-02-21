@@ -41,6 +41,9 @@ namespace TopKey.Hooks
         static IEnumerable<object> ProcessList;
         static KeyboardHook KH;
         static KeyboardProfile CurrentProfile;
+        static List<Keys> PressedKeys = new List<Keys>();
+
+        public static event EventHandler<KeyStateChangesArgs> KeyStateChanged;
 
         public static void init(IEnumerable<object> NewProcessList, KeyboardProfile KP)
         {
@@ -66,7 +69,7 @@ namespace TopKey.Hooks
 
             //IntPtr hWnd;
             IntPtr ActiveWindow = WindowIsActive();
-            if (CurrentProfile != null && CurrentProfile.SelectedKeys != null && CurrentProfile.SelectedKeys.Contains(e.KeyCode) && ActiveWindow != IntPtr.Zero)
+            if (CurrentProfile != null && CurrentProfile.SelectedKeys != null && ActiveWindow != IntPtr.Zero && CurrentProfile.SelectedKeys.Contains(e.KeyCode))
             {
                 foreach (ProcessInfo P in ProcessList)
                 {
@@ -83,7 +86,29 @@ namespace TopKey.Hooks
                     }
                 }
             }
+
+            if (e.WindowMessage == Win32.WM.KEYUP)
+            {
+
+
+                if (PressedKeys.Contains(e.KeyCode))
+                    PressedKeys.Remove(e.KeyCode);
+                Console.WriteLine("Key {0} Released", e.KeyCode);
+            }
+            else
+            {
+                if (!PressedKeys.Contains(e.KeyCode))
+                    PressedKeys.Add(e.KeyCode);
+                Console.WriteLine("Key {0} Pressed", e.KeyCode);
+            }
+            Console.WriteLine("Keys {0}", ((Func<string>)(() => { string s = ""; foreach (Keys k in PressedKeys) s += ", " + k; return s; }))());
+
+            if (KeyStateChanged != null)
+                KeyStateChanged(null, new KeyStateChangesArgs(PressedKeys.ToArray()));
+
         }
+
+
 
         static IntPtr WindowIsActive()
         {

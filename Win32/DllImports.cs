@@ -48,6 +48,9 @@ namespace TopKey.Win32
         [DllImport("user32.dll")]
         public static extern byte VkKeyScan(char ch);
 
+        [DllImport("USER32.DLL")]
+        public static extern int SetWindowLong(IntPtr hWnd, int nIndex, int dwNewLong);
+
 
         [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
         public static extern IntPtr GetModuleHandle(string lpModuleName);
@@ -70,5 +73,7 @@ namespace TopKey.Win32
         [DllImport("user32.dll")]
         public static extern IntPtr GetForegroundWindow();
 
+        [DllImport("USER32.DLL")]
+        public static extern int GetWindowLong(IntPtr hWnd, int nIndex);
     }
 }

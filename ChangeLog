@@ -1,0 +1,8 @@
+====Version 1.1====
+New Features:
+
+Keyboard profiles have an optional Hotkey changer.
+Border Hider - Attempts to hide the border of the windows selected
+               This does not always work however and I found it caused
+               other issues as the WoW may not have expected the border
+               to be removed.

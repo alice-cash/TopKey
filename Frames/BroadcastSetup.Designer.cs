@@ -67,7 +67,9 @@ namespace TopKey.Frames
             this.Quit = new System.Windows.Forms.Button();
             this.Process = new System.Windows.Forms.Button();
             this.SaveAll = new System.Windows.Forms.Button();
+            this.SetHotkey = new System.Windows.Forms.Button();
             this.keyboard1 = new TopKey.Frames.Keyboard_QWERT();
+            this.borderwindowcontrol = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ExpandContract
@@ -106,17 +108,17 @@ namespace TopKey.Frames
             // ProfileList
             // 
             this.ProfileList.FormattingEnabled = true;
-            this.ProfileList.Location = new System.Drawing.Point(607, 178);
+            this.ProfileList.Location = new System.Drawing.Point(618, 178);
             this.ProfileList.Name = "ProfileList";
-            this.ProfileList.Size = new System.Drawing.Size(239, 21);
+            this.ProfileList.Size = new System.Drawing.Size(228, 21);
             this.ProfileList.TabIndex = 4;
             this.ProfileList.SelectedIndexChanged += new System.EventHandler(this.ProfileList_SelectedIndexChanged);
             // 
             // DeleteProfile
             // 
-            this.DeleteProfile.Location = new System.Drawing.Point(771, 200);
+            this.DeleteProfile.Location = new System.Drawing.Point(794, 200);
             this.DeleteProfile.Name = "DeleteProfile";
-            this.DeleteProfile.Size = new System.Drawing.Size(75, 23);
+            this.DeleteProfile.Size = new System.Drawing.Size(52, 23);
             this.DeleteProfile.TabIndex = 5;
             this.DeleteProfile.Text = "Delete";
             this.DeleteProfile.UseVisualStyleBackColor = true;
@@ -124,9 +126,9 @@ namespace TopKey.Frames
             // 
             // NewProfile
             // 
-            this.NewProfile.Location = new System.Drawing.Point(607, 200);
+            this.NewProfile.Location = new System.Drawing.Point(676, 200);
             this.NewProfile.Name = "NewProfile";
-            this.NewProfile.Size = new System.Drawing.Size(75, 23);
+            this.NewProfile.Size = new System.Drawing.Size(52, 23);
             this.NewProfile.TabIndex = 6;
             this.NewProfile.Text = "New";
             this.NewProfile.UseVisualStyleBackColor = true;
@@ -171,13 +173,23 @@ namespace TopKey.Frames
             // 
             // SaveAll
             // 
-            this.SaveAll.Location = new System.Drawing.Point(688, 200);
+            this.SaveAll.Location = new System.Drawing.Point(734, 200);
             this.SaveAll.Name = "SaveAll";
-            this.SaveAll.Size = new System.Drawing.Size(77, 23);
+            this.SaveAll.Size = new System.Drawing.Size(54, 23);
             this.SaveAll.TabIndex = 10;
             this.SaveAll.Text = "Save All";
             this.SaveAll.UseVisualStyleBackColor = true;
             this.SaveAll.Click += new System.EventHandler(this.SaveAll_Click);
+            // 
+            // SetHotkey
+            // 
+            this.SetHotkey.Location = new System.Drawing.Point(618, 200);
+            this.SetHotkey.Name = "SetHotkey";
+            this.SetHotkey.Size = new System.Drawing.Size(52, 23);
+            this.SetHotkey.TabIndex = 11;
+            this.SetHotkey.Text = "Hotkey";
+            this.SetHotkey.UseVisualStyleBackColor = true;
+            this.SetHotkey.Click += new System.EventHandler(this.SetHotkey_Click);
             // 
             // keyboard1
             // 
@@ -188,12 +200,24 @@ namespace TopKey.Frames
             this.keyboard1.Size = new System.Drawing.Size(834, 155);
             this.keyboard1.TabIndex = 0;
             // 
+            // borderwindowcontrol
+            // 
+            this.borderwindowcontrol.Location = new System.Drawing.Point(144, 200);
+            this.borderwindowcontrol.Name = "borderwindowcontrol";
+            this.borderwindowcontrol.Size = new System.Drawing.Size(126, 23);
+            this.borderwindowcontrol.TabIndex = 12;
+            this.borderwindowcontrol.Text = "Hide Borders";
+            this.borderwindowcontrol.UseVisualStyleBackColor = true;
+            this.borderwindowcontrol.Click += new System.EventHandler(this.button1_Click);
+            // 
             // BroadcastSetup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(858, 243);
             this.ControlBox = false;
+            this.Controls.Add(this.borderwindowcontrol);
+            this.Controls.Add(this.SetHotkey);
             this.Controls.Add(this.SaveAll);
             this.Controls.Add(this.Process);
             this.Controls.Add(this.Quit);
@@ -231,6 +255,8 @@ namespace TopKey.Frames
         private System.Windows.Forms.Button Quit;
         private System.Windows.Forms.Button Process;
         private System.Windows.Forms.Button SaveAll;
+        private System.Windows.Forms.Button SetHotkey;
+        private System.Windows.Forms.Button borderwindowcontrol;
 
     }
 }

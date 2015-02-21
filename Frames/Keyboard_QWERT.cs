@@ -82,7 +82,7 @@ namespace TopKey.Frames
             return Profile;
         }
 
-        public void SetProfile(KeyboardProfile Profile)
+        public void SetProfile(KeyboardProfile Profile, bool UseHotkey)
         {
             SettingProfile = true;
             EnumConverter Con = new EnumConverter(typeof(Win32.Keys));
@@ -93,9 +93,15 @@ namespace TopKey.Frames
                     ((CheckBox)k).Checked = false;
             }
 
+            Win32.Keys[] KeyProfile;
+            if (UseHotkey)
+                KeyProfile = Profile.Hotkey;
+            else
+                KeyProfile = Profile.SelectedKeys;
+
             foreach (Control k in this.Controls)
             {
-                if (k.GetType() == typeof(CheckBox) && k.Enabled && Profile.SelectedKeys.Contains((Win32.Keys)Con.ConvertFromString(k.Name)))
+                if (k.GetType() == typeof(CheckBox) && k.Enabled && KeyProfile.Contains((Win32.Keys)Con.ConvertFromString(k.Name)))
                     ((CheckBox)k).Checked = true;
             }
             ProfileName = Profile.Name;
