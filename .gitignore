@@ -1,0 +1,9 @@
+bin
+bin/**
+obj
+obj/**
+packages
+packages/**
+**.suo
+*.sln.ide
+*.sln.ide/**
