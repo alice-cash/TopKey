@@ -1,5 +1,5 @@
 ﻿/*
- * Copyright 2010 Matthew Cash. All rights reserved.
+ * Copyright 2020 Alice Cash. All rights reserved.
  * 
  * Redistribution and use in source and binary forms, with or without modification, are
  * permitted provided that the following conditions are met:
@@ -11,9 +11,9 @@
  *       of conditions and the following disclaimer in the documentation and/or other materials
  *       provided with the distribution.
  * 
- * THIS SOFTWARE IS PROVIDED BY Matthew Cash ``AS IS'' AND ANY EXPRESS OR IMPLIED
+ * THIS SOFTWARE IS PROVIDED BY Alice Cash ``AS IS'' AND ANY EXPRESS OR IMPLIED
  * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
- * FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL Matthew Cash OR
+ * FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL Alice Cash OR
  * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
  * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
  * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
@@ -23,7 +23,7 @@
  * 
  * The views and conclusions contained in the software and documentation are those of the
  * authors and should not be interpreted as representing official policies, either expressed
- * or implied, of Matthew Cash.
+ * or implied, of Alice Cash.
  */
 
 
@@ -68,8 +68,8 @@ namespace TopKey.Frames
             this.Process = new System.Windows.Forms.Button();
             this.SaveAll = new System.Windows.Forms.Button();
             this.SetHotkey = new System.Windows.Forms.Button();
-            this.keyboard1 = new TopKey.Frames.Keyboard_QWERT();
             this.borderwindowcontrol = new System.Windows.Forms.Button();
+            this.keyboard1 = new TopKey.Frames.Keyboard_QWERT();
             this.SuspendLayout();
             // 
             // ExpandContract
@@ -78,7 +78,7 @@ namespace TopKey.Frames
             this.ExpandContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExpandContract.Location = new System.Drawing.Point(0, 229);
             this.ExpandContract.Name = "ExpandContract";
-            this.ExpandContract.Size = new System.Drawing.Size(858, 14);
+            this.ExpandContract.Size = new System.Drawing.Size(758, 14);
             this.ExpandContract.TabIndex = 1;
             this.ExpandContract.Text = "vvvvvvvvvvvvvvvvvvvvv";
             this.ExpandContract.UseVisualStyleBackColor = true;
@@ -89,9 +89,9 @@ namespace TopKey.Frames
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(14, 1);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(316, 13);
+            this.label1.Size = new System.Drawing.Size(149, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Click the keys to change their State.           keys are broadcasted.";
+            this.label1.Text = "BROADCAST_SETUP_HELP";
             // 
             // label2
             // 
@@ -101,14 +101,15 @@ namespace TopKey.Frames
             this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label2.Location = new System.Drawing.Point(187, 1);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 13);
+            this.label2.Size = new System.Drawing.Size(208, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Blue";
+            this.label2.Text = "BROADCAST_SETUP_HELP_BLUE";
+            this.label2.Visible = false;
             // 
             // ProfileList
             // 
             this.ProfileList.FormattingEnabled = true;
-            this.ProfileList.Location = new System.Drawing.Point(618, 178);
+            this.ProfileList.Location = new System.Drawing.Point(518, 178);
             this.ProfileList.Name = "ProfileList";
             this.ProfileList.Size = new System.Drawing.Size(228, 21);
             this.ProfileList.TabIndex = 4;
@@ -116,28 +117,28 @@ namespace TopKey.Frames
             // 
             // DeleteProfile
             // 
-            this.DeleteProfile.Location = new System.Drawing.Point(794, 200);
+            this.DeleteProfile.Location = new System.Drawing.Point(694, 200);
             this.DeleteProfile.Name = "DeleteProfile";
             this.DeleteProfile.Size = new System.Drawing.Size(52, 23);
             this.DeleteProfile.TabIndex = 5;
-            this.DeleteProfile.Text = "Delete";
+            this.DeleteProfile.Text = "BROADCAST_CONFIGURE_DELETE";
             this.DeleteProfile.UseVisualStyleBackColor = true;
             this.DeleteProfile.Click += new System.EventHandler(this.DeleteProfile_Click);
             // 
             // NewProfile
             // 
-            this.NewProfile.Location = new System.Drawing.Point(676, 200);
+            this.NewProfile.Location = new System.Drawing.Point(576, 200);
             this.NewProfile.Name = "NewProfile";
             this.NewProfile.Size = new System.Drawing.Size(52, 23);
             this.NewProfile.TabIndex = 6;
-            this.NewProfile.Text = "New";
+            this.NewProfile.Text = "BROADCAST_CONFIGURE_NEW";
             this.NewProfile.UseVisualStyleBackColor = true;
             this.NewProfile.Click += new System.EventHandler(this.NewProfile_Click);
             // 
             // Move
             // 
             this.Move.AutoSize = true;
-            this.Move.Location = new System.Drawing.Point(768, 1);
+            this.Move.Location = new System.Drawing.Point(672, -3);
             this.Move.Name = "Move";
             this.Move.Size = new System.Drawing.Size(46, 13);
             this.Move.TabIndex = 7;
@@ -152,7 +153,7 @@ namespace TopKey.Frames
             this.Quit.FlatAppearance.BorderSize = 0;
             this.Quit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Quit.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Quit.Location = new System.Drawing.Point(826, 1);
+            this.Quit.Location = new System.Drawing.Point(730, -3);
             this.Quit.Name = "Quit";
             this.Quit.Size = new System.Drawing.Size(20, 17);
             this.Quit.TabIndex = 8;
@@ -167,29 +168,40 @@ namespace TopKey.Frames
             this.Process.Name = "Process";
             this.Process.Size = new System.Drawing.Size(126, 23);
             this.Process.TabIndex = 9;
-            this.Process.Text = "Configure Processes";
+            this.Process.Text = "BROADCAST_CONFIGURE_PROCESS";
             this.Process.UseVisualStyleBackColor = true;
             this.Process.Click += new System.EventHandler(this.Process_Click);
             // 
             // SaveAll
             // 
-            this.SaveAll.Location = new System.Drawing.Point(734, 200);
+            this.SaveAll.Location = new System.Drawing.Point(634, 200);
             this.SaveAll.Name = "SaveAll";
             this.SaveAll.Size = new System.Drawing.Size(54, 23);
             this.SaveAll.TabIndex = 10;
-            this.SaveAll.Text = "Save All";
+            this.SaveAll.Text = "BROADCAST_CONFIGURE_SAVEALL";
             this.SaveAll.UseVisualStyleBackColor = true;
             this.SaveAll.Click += new System.EventHandler(this.SaveAll_Click);
             // 
             // SetHotkey
             // 
-            this.SetHotkey.Location = new System.Drawing.Point(618, 200);
+            this.SetHotkey.Location = new System.Drawing.Point(518, 200);
             this.SetHotkey.Name = "SetHotkey";
             this.SetHotkey.Size = new System.Drawing.Size(52, 23);
             this.SetHotkey.TabIndex = 11;
-            this.SetHotkey.Text = "Hotkey";
+            this.SetHotkey.Text = "BROADCAST_CONFIGURE_HOTKEY";
             this.SetHotkey.UseVisualStyleBackColor = true;
             this.SetHotkey.Click += new System.EventHandler(this.SetHotkey_Click);
+            // 
+            // borderwindowcontrol
+            // 
+            this.borderwindowcontrol.Location = new System.Drawing.Point(144, 200);
+            this.borderwindowcontrol.Name = "borderwindowcontrol";
+            this.borderwindowcontrol.Size = new System.Drawing.Size(126, 23);
+            this.borderwindowcontrol.TabIndex = 12;
+            this.borderwindowcontrol.Text = "BROADCAST_CONFIGURE_HIDEBOR";
+            this.borderwindowcontrol.UseVisualStyleBackColor = true;
+            this.borderwindowcontrol.Visible = false;
+            this.borderwindowcontrol.Click += new System.EventHandler(this.button1_Click);
             // 
             // keyboard1
             // 
@@ -200,21 +212,11 @@ namespace TopKey.Frames
             this.keyboard1.Size = new System.Drawing.Size(834, 155);
             this.keyboard1.TabIndex = 0;
             // 
-            // borderwindowcontrol
-            // 
-            this.borderwindowcontrol.Location = new System.Drawing.Point(144, 200);
-            this.borderwindowcontrol.Name = "borderwindowcontrol";
-            this.borderwindowcontrol.Size = new System.Drawing.Size(126, 23);
-            this.borderwindowcontrol.TabIndex = 12;
-            this.borderwindowcontrol.Text = "Hide Borders";
-            this.borderwindowcontrol.UseVisualStyleBackColor = true;
-            this.borderwindowcontrol.Click += new System.EventHandler(this.button1_Click);
-            // 
             // BroadcastSetup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(858, 243);
+            this.ClientSize = new System.Drawing.Size(758, 243);
             this.ControlBox = false;
             this.Controls.Add(this.borderwindowcontrol);
             this.Controls.Add(this.SetHotkey);
@@ -231,7 +233,7 @@ namespace TopKey.Frames
             this.Controls.Add(this.keyboard1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(858, 243);
-            this.MinimumSize = new System.Drawing.Size(858, 243);
+            this.MinimumSize = new System.Drawing.Size(758, 243);
             this.Name = "BroadcastSetup";
             this.Text = "BroadcastSetup";
             this.TopMost = true;

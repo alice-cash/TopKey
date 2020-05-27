@@ -1,0 +1,86 @@
+﻿
+﻿#-----------------------------------------------------------------------------------------------#
+# Copyright 2020 Alice Cash. All rights reserved.												#
+#																								#
+# Redistribution and use in source and binary forms, with or without modification, are			#
+# permitted provided that the following conditions are met:										#
+#																								#
+#    1. Redistributions of source code must retain the above copyright notice, this list of		#
+#       conditions and the following disclaimer.												#
+#																								#
+#    2. Redistributions in binary form must reproduce the above copyright notice, this list		#
+#       of conditions and the following disclaimer in the documentation and/or other materials	#
+#       provided with the distribution.															#
+#																								#
+# THIS SOFTWARE IS PROVIDED BY Alice Cash ``AS IS'' AND ANY EXPRESS OR IMPLIED					#
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND		#
+# FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL Alice Cash OR				#
+# CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR			#
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR		#
+# SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON		#
+# ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING			#
+# NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF			#
+# ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.													#
+#																								#
+# The views and conclusions contained in the software and documentation are those of the		#
+# authors and should not be interpreted as representing official policies, either expressed		#
+# or implied, of Alice Cash.																	#
+#-----------------------------------------------------------------------------------------------#
+
+#-----------------------------------------------------------------------------------------------#
+# Lines starting with a # are ignored															#
+# I keep a standard with lines that have variables. They use the String.Format form to make		#
+# things easy. There may be a comment before it specifying what the number may contain			#
+# within the string.																			#
+# if you use curly brackets, you must double them up											#
+# "There is only {{one}} set of brackets here. There is only a single bracket here: {{"			#
+#-----------------------------------------------------------------------------------------------#
+
+# There are 2 special ones that should always exist
+# This is the name Presented to the user
+Language_DisplayName 		English
+Language_Name		 		en-US
+
+# This is the error message the user gets for a language key word not existing in the language file
+# $0 is the Name of the Localization String IE: 'English'
+Error_No_Local 	There is no Localization for '{0}'
+
+DEBUG_KEY_RELEASE			Key {0} Released
+DEBUG_KEY_PRESS				Key {0} Pressed
+DEBUG_KEY_LIST				Keys {0}
+
+PROCESS_CONFIGURE_TITLE		Process Configure
+PROCESS_CONFIGURE_REMOVE	Remove
+PROCESS_CONFIGURE_SEARCH	Search
+PROCESS_CONFIGURE_ADD		Add
+
+INPUT_OK					OK
+INPUT_CANCEL				Cancel
+
+HIDEFRAME_TITLE				Hidden Frame Selector
+
+BROADCAST_SETUP_HELP	    Click the keys to change their State. Blue keys are broadcasted.
+#BROADCAST_SETUP_HELP_BLUE	Blue
+BROADCAST_CONFIGURE_PROCESS	Configure Processes
+BROADCAST_CONFIGURE_HIDEBOR Hide Borders
+BROADCAST_CONFIGURE_HOTKEY	Hotkey
+BROADCAST_CONFIGURE_NEW		New
+BROADCAST_CONFIGURE_SAVEALL	Save All
+BROADCAST_CONFIGURE_DELETE	Delete
+
+BROADCAST_EXPAND_DOWN		vvvvvvvvvvvvv Click here to show vvvvvvvvvvvvv
+BROADCAST_EXPAND_UP			^^^^^^^^^^^^^ Click here to hide ^^^^^^^^^^^^^
+
+KEYPROFILE_CHANGED			{0} Selected.
+KEYPROFILE_NEW_NAME			Please enter a new profile name.
+KEYPROFILE_INVALID_CHAR		Name must not contain any of the following characters: {0}
+KEYPROFILE_SAVE_ERR			There is a possible file/folder permission error. Please check the read/write permission of the subfolder 'Profiles'.
+KEYPROFILE_IO_ERROR			There was an error loading the default key profile. If you see this message repeatedly, then there is an error with the default profile template or file permission error.
+KEYPROFILE_IO_ERROR_TITLE	Error!
+KEYPROFILE_DELETE_LAST		You cannot delete the last profile!
+KEYPROFILE_DELETE_PROMPT	Are you sure? This cannot be undone!
+KEYPROFILE_DELETE_TITLE		DELETE CONFIRM
+
+QUIT_PROMPT_TITLE			Exit?
+QUIT_PROMPT					Are you sure you wish to quit?
+

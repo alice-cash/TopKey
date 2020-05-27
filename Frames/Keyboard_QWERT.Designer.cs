@@ -1,5 +1,5 @@
 ﻿/*
- * Copyright 2010 Matthew Cash. All rights reserved.
+ * Copyright 2020 Alice Cash. All rights reserved.
  * 
  * Redistribution and use in source and binary forms, with or without modification, are
  * permitted provided that the following conditions are met:
@@ -11,9 +11,9 @@
  *       of conditions and the following disclaimer in the documentation and/or other materials
  *       provided with the distribution.
  * 
- * THIS SOFTWARE IS PROVIDED BY Matthew Cash ``AS IS'' AND ANY EXPRESS OR IMPLIED
+ * THIS SOFTWARE IS PROVIDED BY Alice Cash ``AS IS'' AND ANY EXPRESS OR IMPLIED
  * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
- * FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL Matthew Cash OR
+ * FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL Alice Cash OR
  * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
  * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
  * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
@@ -23,7 +23,7 @@
  * 
  * The views and conclusions contained in the software and documentation are those of the
  * authors and should not be interpreted as representing official policies, either expressed
- * or implied, of Matthew Cash.
+ * or implied, of Alice Cash.
  */
 
 
@@ -2346,7 +2346,7 @@ namespace TopKey.Frames
             this.F13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.F13.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.F13.ForeColor = System.Drawing.Color.White;
-            this.F13.Location = new System.Drawing.Point(729, 3);
+            this.F13.Location = new System.Drawing.Point(633, 3);
             this.F13.Margin = new System.Windows.Forms.Padding(1);
             this.F13.Name = "F13";
             this.F13.Size = new System.Drawing.Size(34, 23);
@@ -2367,7 +2367,7 @@ namespace TopKey.Frames
             this.F14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.F14.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.F14.ForeColor = System.Drawing.Color.White;
-            this.F14.Location = new System.Drawing.Point(765, 3);
+            this.F14.Location = new System.Drawing.Point(669, 3);
             this.F14.Margin = new System.Windows.Forms.Padding(1);
             this.F14.Name = "F14";
             this.F14.Size = new System.Drawing.Size(34, 23);
@@ -2388,7 +2388,7 @@ namespace TopKey.Frames
             this.F15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.F15.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.F15.ForeColor = System.Drawing.Color.White;
-            this.F15.Location = new System.Drawing.Point(801, 3);
+            this.F15.Location = new System.Drawing.Point(705, 3);
             this.F15.Margin = new System.Windows.Forms.Padding(1);
             this.F15.Name = "F15";
             this.F15.Size = new System.Drawing.Size(34, 23);
@@ -2409,7 +2409,7 @@ namespace TopKey.Frames
             this.F16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.F16.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.F16.ForeColor = System.Drawing.Color.White;
-            this.F16.Location = new System.Drawing.Point(729, 28);
+            this.F16.Location = new System.Drawing.Point(633, 28);
             this.F16.Margin = new System.Windows.Forms.Padding(1);
             this.F16.Name = "F16";
             this.F16.Size = new System.Drawing.Size(34, 23);
@@ -2430,7 +2430,7 @@ namespace TopKey.Frames
             this.F17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.F17.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.F17.ForeColor = System.Drawing.Color.White;
-            this.F17.Location = new System.Drawing.Point(765, 28);
+            this.F17.Location = new System.Drawing.Point(669, 28);
             this.F17.Margin = new System.Windows.Forms.Padding(1);
             this.F17.Name = "F17";
             this.F17.Size = new System.Drawing.Size(34, 23);
@@ -2451,7 +2451,7 @@ namespace TopKey.Frames
             this.F18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.F18.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.F18.ForeColor = System.Drawing.Color.White;
-            this.F18.Location = new System.Drawing.Point(801, 28);
+            this.F18.Location = new System.Drawing.Point(705, 28);
             this.F18.Margin = new System.Windows.Forms.Padding(1);
             this.F18.Name = "F18";
             this.F18.Size = new System.Drawing.Size(34, 23);
@@ -2472,7 +2472,7 @@ namespace TopKey.Frames
             this.F19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.F19.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.F19.ForeColor = System.Drawing.Color.White;
-            this.F19.Location = new System.Drawing.Point(729, 53);
+            this.F19.Location = new System.Drawing.Point(633, 53);
             this.F19.Margin = new System.Windows.Forms.Padding(1);
             this.F19.Name = "F19";
             this.F19.Size = new System.Drawing.Size(34, 23);
@@ -2493,7 +2493,7 @@ namespace TopKey.Frames
             this.F20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.F20.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.F20.ForeColor = System.Drawing.Color.White;
-            this.F20.Location = new System.Drawing.Point(765, 53);
+            this.F20.Location = new System.Drawing.Point(669, 53);
             this.F20.Margin = new System.Windows.Forms.Padding(1);
             this.F20.Name = "F20";
             this.F20.Size = new System.Drawing.Size(34, 23);
@@ -2514,7 +2514,7 @@ namespace TopKey.Frames
             this.F21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.F21.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.F21.ForeColor = System.Drawing.Color.White;
-            this.F21.Location = new System.Drawing.Point(801, 53);
+            this.F21.Location = new System.Drawing.Point(705, 53);
             this.F21.Margin = new System.Windows.Forms.Padding(1);
             this.F21.Name = "F21";
             this.F21.Size = new System.Drawing.Size(34, 23);
@@ -2535,7 +2535,7 @@ namespace TopKey.Frames
             this.F22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.F22.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.F22.ForeColor = System.Drawing.Color.White;
-            this.F22.Location = new System.Drawing.Point(729, 78);
+            this.F22.Location = new System.Drawing.Point(633, 78);
             this.F22.Margin = new System.Windows.Forms.Padding(1);
             this.F22.Name = "F22";
             this.F22.Size = new System.Drawing.Size(34, 23);
@@ -2556,7 +2556,7 @@ namespace TopKey.Frames
             this.F23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.F23.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.F23.ForeColor = System.Drawing.Color.White;
-            this.F23.Location = new System.Drawing.Point(765, 78);
+            this.F23.Location = new System.Drawing.Point(669, 78);
             this.F23.Margin = new System.Windows.Forms.Padding(1);
             this.F23.Name = "F23";
             this.F23.Size = new System.Drawing.Size(34, 23);
@@ -2577,7 +2577,7 @@ namespace TopKey.Frames
             this.F24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.F24.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.F24.ForeColor = System.Drawing.Color.White;
-            this.F24.Location = new System.Drawing.Point(801, 78);
+            this.F24.Location = new System.Drawing.Point(705, 78);
             this.F24.Margin = new System.Windows.Forms.Padding(1);
             this.F24.Name = "F24";
             this.F24.Size = new System.Drawing.Size(34, 23);
@@ -2620,7 +2620,7 @@ namespace TopKey.Frames
             this.LeftButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LeftButton.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LeftButton.ForeColor = System.Drawing.Color.White;
-            this.LeftButton.Location = new System.Drawing.Point(649, 78);
+            this.LeftButton.Location = new System.Drawing.Point(743, 78);
             this.LeftButton.Margin = new System.Windows.Forms.Padding(1);
             this.LeftButton.Name = "LeftButton";
             this.LeftButton.Size = new System.Drawing.Size(34, 23);
@@ -2628,6 +2628,7 @@ namespace TopKey.Frames
             this.LeftButton.Text = "Left";
             this.LeftButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LeftButton.UseVisualStyleBackColor = false;
+            this.LeftButton.Visible = false;
             this.LeftButton.CheckedChanged += new System.EventHandler(this.Key_CheckedChanged);
             // 
             // RightButton
@@ -2642,7 +2643,7 @@ namespace TopKey.Frames
             this.RightButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RightButton.Font = new System.Drawing.Font("Arial Narrow", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RightButton.ForeColor = System.Drawing.Color.White;
-            this.RightButton.Location = new System.Drawing.Point(691, 78);
+            this.RightButton.Location = new System.Drawing.Point(785, 78);
             this.RightButton.Margin = new System.Windows.Forms.Padding(1);
             this.RightButton.Name = "RightButton";
             this.RightButton.Size = new System.Drawing.Size(34, 23);
@@ -2650,6 +2651,7 @@ namespace TopKey.Frames
             this.RightButton.Text = "Right";
             this.RightButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.RightButton.UseVisualStyleBackColor = false;
+            this.RightButton.Visible = false;
             this.RightButton.CheckedChanged += new System.EventHandler(this.Key_CheckedChanged);
             // 
             // MiddleButton
@@ -2664,7 +2666,7 @@ namespace TopKey.Frames
             this.MiddleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MiddleButton.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MiddleButton.ForeColor = System.Drawing.Color.White;
-            this.MiddleButton.Location = new System.Drawing.Point(668, 103);
+            this.MiddleButton.Location = new System.Drawing.Point(762, 103);
             this.MiddleButton.Margin = new System.Windows.Forms.Padding(1);
             this.MiddleButton.Name = "MiddleButton";
             this.MiddleButton.Size = new System.Drawing.Size(34, 23);
@@ -2672,6 +2674,7 @@ namespace TopKey.Frames
             this.MiddleButton.Text = "Middle";
             this.MiddleButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.MiddleButton.UseVisualStyleBackColor = false;
+            this.MiddleButton.Visible = false;
             this.MiddleButton.CheckedChanged += new System.EventHandler(this.Key_CheckedChanged);
             // 
             // ExtraButton1
@@ -2686,7 +2689,7 @@ namespace TopKey.Frames
             this.ExtraButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExtraButton1.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExtraButton1.ForeColor = System.Drawing.Color.White;
-            this.ExtraButton1.Location = new System.Drawing.Point(632, 103);
+            this.ExtraButton1.Location = new System.Drawing.Point(726, 103);
             this.ExtraButton1.Margin = new System.Windows.Forms.Padding(1);
             this.ExtraButton1.Name = "ExtraButton1";
             this.ExtraButton1.Size = new System.Drawing.Size(34, 23);
@@ -2694,6 +2697,7 @@ namespace TopKey.Frames
             this.ExtraButton1.Text = "B4";
             this.ExtraButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ExtraButton1.UseVisualStyleBackColor = false;
+            this.ExtraButton1.Visible = false;
             this.ExtraButton1.CheckedChanged += new System.EventHandler(this.Key_CheckedChanged);
             // 
             // ExtraButton2
@@ -2708,7 +2712,7 @@ namespace TopKey.Frames
             this.ExtraButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExtraButton2.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExtraButton2.ForeColor = System.Drawing.Color.White;
-            this.ExtraButton2.Location = new System.Drawing.Point(632, 128);
+            this.ExtraButton2.Location = new System.Drawing.Point(726, 128);
             this.ExtraButton2.Margin = new System.Windows.Forms.Padding(1);
             this.ExtraButton2.Name = "ExtraButton2";
             this.ExtraButton2.Size = new System.Drawing.Size(34, 23);
@@ -2716,6 +2720,7 @@ namespace TopKey.Frames
             this.ExtraButton2.Text = "B5";
             this.ExtraButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ExtraButton2.UseVisualStyleBackColor = false;
+            this.ExtraButton2.Visible = false;
             this.ExtraButton2.CheckedChanged += new System.EventHandler(this.Key_CheckedChanged);
             // 
             // RightWindows
@@ -2743,12 +2748,13 @@ namespace TopKey.Frames
             // 
             this.MousePic.Enabled = false;
             this.MousePic.Image = global::TopKey.Properties.Resources.Crispy_Computer_Mouse_Top_Down_View_clip_art_medium;
-            this.MousePic.Location = new System.Drawing.Point(649, 3);
+            this.MousePic.Location = new System.Drawing.Point(743, 3);
             this.MousePic.Name = "MousePic";
             this.MousePic.Size = new System.Drawing.Size(76, 217);
             this.MousePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.MousePic.TabIndex = 114;
             this.MousePic.TabStop = false;
+            this.MousePic.Visible = false;
             // 
             // Keyboard_QWERT
             // 
@@ -2876,11 +2882,10 @@ namespace TopKey.Frames
             this.Controls.Add(this.F1);
             this.Controls.Add(this.Escape);
             this.Controls.Add(this.MousePic);
-            this.MaximumSize = new System.Drawing.Size(834, 155);
-            this.MinimumSize = new System.Drawing.Size(834, 155);
+            this.MaximumSize = new System.Drawing.Size(742, 155);
+            this.MinimumSize = new System.Drawing.Size(742, 155);
             this.Name = "Keyboard_QWERT";
-            this.Size = new System.Drawing.Size(834, 155);
-            this.Load += new System.EventHandler(this.Keyboard_QWERT_Load);
+            this.Size = new System.Drawing.Size(742, 155);
             ((System.ComponentModel.ISupportInitialize)(this.MousePic)).EndInit();
             this.ResumeLayout(false);
 

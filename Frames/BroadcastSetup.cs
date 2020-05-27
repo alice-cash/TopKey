@@ -1,5 +1,5 @@
 ﻿/*
- * Copyright 2010 Matthew Cash. All rights reserved.
+ * Copyright 2020 Alice Cash. All rights reserved.
  * 
  * Redistribution and use in source and binary forms, with or without modification, are
  * permitted provided that the following conditions are met:
@@ -11,9 +11,9 @@
  *       of conditions and the following disclaimer in the documentation and/or other materials
  *       provided with the distribution.
  * 
- * THIS SOFTWARE IS PROVIDED BY Matthew Cash ``AS IS'' AND ANY EXPRESS OR IMPLIED
+ * THIS SOFTWARE IS PROVIDED BY Alice Cash ``AS IS'' AND ANY EXPRESS OR IMPLIED
  * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
- * FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL Matthew Cash OR
+ * FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL Alice Cash OR
  * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
  * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
  * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
@@ -23,7 +23,7 @@
  * 
  * The views and conclusions contained in the software and documentation are those of the
  * authors and should not be interpreted as representing official policies, either expressed
- * or implied, of Matthew Cash.
+ * or implied, of Alice Cash.
  */
 
 using System;
@@ -40,6 +40,8 @@ using System.Xml.Serialization;
 
 using TopKey.Data;
 using TopKey.Hooks;
+using TopKey.Localization;
+using StormLib.Localization;
 
 namespace TopKey.Frames
 {
@@ -63,6 +65,7 @@ namespace TopKey.Frames
         public BroadcastSetup()
         {
             InitializeComponent();
+            SetupLocalization.SetupForm(this);
         }
 
 
@@ -71,7 +74,8 @@ namespace TopKey.Frames
             OrignalBackColor = SetHotkey.BackColor;
             this.Top = -(this.Height) + this.ExpandContract.Height;
             Contracted = false;
-            this.ExpandContract.Text = "vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv";
+            this.ExpandContract.Text = DefaultLanguage.Strings.GetString("BROADCAST_EXPAND_DOWN");
+            ;
             Profiles = new List<KeyboardProfile>();
             LoadProfiles();
 
@@ -81,7 +85,7 @@ namespace TopKey.Frames
             Info.ProcessListChanged += new EventHandler(Info_ProcessListChanged);
             Info.Show();
             Hidey = new HideFrame();
-            Hidey.Show();
+            //Hidey.Show();
             ProcessHooks.KeyStateChanged += new EventHandler<KeyStateChangesArgs>(ProcessHooks_KeyStateChanged);
             ProcessHooks.init(Info.SelectedProcess, Profiles[ProfileList.SelectedIndex]);
 
@@ -94,12 +98,12 @@ namespace TopKey.Frames
         {
             if (e.PressedKeys.Length == 2)
             { }
-            for(int i = 0; i < Profiles.Count; i++)
+            for (int i = 0; i < Profiles.Count; i++)
             {
                 if (SameKeys(Profiles[i].Hotkey, e.PressedKeys))
                 {
                     ProfileList.SelectedIndex = i;
-                    new Popup("'" + Profiles[i].Name + "' Selected.").Show();
+                    new Popup(DefaultLanguage.Strings.GetFormatedString("BROADCAST_EXPAND_DOWN", Profiles[i].Name)).Show();
                     return;
                 }
             }
@@ -107,7 +111,10 @@ namespace TopKey.Frames
 
         bool SameKeys(Win32.Keys[] set1, Win32.Keys[] set2)
         {
-            if (set1 == null) return false;
+            if (set1 == null)
+                return false;
+            if (set1.Length == 0 || set2.Length == 0)
+                return false;
             foreach (Win32.Keys key in set1)
                 if (!set2.Contains(key))
                     return false;
@@ -143,18 +150,19 @@ namespace TopKey.Frames
         {
             Input NewName = new Input();
             KeyboardProfile KP = new KeyboardProfile();
-            if (NewName.ShowDialog("Please enter a name.") == System.Windows.Forms.DialogResult.OK)
+            if (NewName.ShowDialog(DefaultLanguage.Strings.GetString("KEYPROFILE_NEW_NAME")) == System.Windows.Forms.DialogResult.OK)
             {
                 foreach (char c in Path.GetInvalidPathChars())
                 {
                     if (NewName.Value.Contains(c))
                     {
-                        MessageBox.Show(string.Format("Name must not contain any of the following characters: {0}", Path.GetInvalidPathChars()));
+                        MessageBox.Show(DefaultLanguage.Strings.GetFormatedString("KEYPROFILE_INVALID_CHAR", Path.GetInvalidPathChars()));
                         return;
                     }
                 }
                 KP.Name = NewName.Value;
                 KP.SelectedKeys = new Win32.Keys[0];
+                KP.Hotkey = new Win32.Keys[0];
                 Profiles.Add(KP);
                 ProfileList.Items.Add(KP);
                 ProfileList.SelectedItem = KP;
@@ -196,7 +204,7 @@ namespace TopKey.Frames
                 }
                 catch (IOException)
                 {
-                    MessageBox.Show("There is a possible file/folder permission error. Please check the read/write permission of the sub folder 'Profiles'.");
+                    MessageBox.Show(DefaultLanguage.Strings.GetString("KEYPROFILE_SAVE_ERR"));
                 }
             }
             KeyboardProfile KP;
@@ -233,18 +241,18 @@ namespace TopKey.Frames
                     {
                         KP = new KeyboardProfile();
                         KP.Name = "Blank";
-                        MessageBox.Show("There was an error loading the default key profile. If you see this message repeadly, then there is an error with the default profile template or file permission error.", "Error!");
+                        MessageBox.Show(DefaultLanguage.Strings.GetString("KEYPROFILE_IO_ERROR"), DefaultLanguage.Strings.GetString("KEYPROFILE_IO_ERROR_TITLE"));
                     }
                 }
                 catch (IOException)
                 {
-                    MessageBox.Show("There is a possible file/folder permission error. Please check the read/write permission of the sub folder 'Profiles'.");
+                    MessageBox.Show(DefaultLanguage.Strings.GetString("KEYPROFILE_SAVE_ERR"));
                     KP = new KeyboardProfile();
                     KP.Name = "_DEFAULT";
                     Profiles.Add(KP);
                     ProfileList.Items.Add(KP);
                 }
-                
+
             }
 
             foreach (var item in ProfileList.Items)
@@ -259,6 +267,8 @@ namespace TopKey.Frames
                 }
             }
 
+            if (ProfileList.SelectedIndex == -1)
+                ProfileList.SelectedIndex = 0;
 
             keyboard1.SetProfile(Profiles[ProfileList.SelectedIndex], SettingHotkey);
             ProcessHooks.ChangeProfile(Profiles[ProfileList.SelectedIndex]);
@@ -276,13 +286,13 @@ namespace TopKey.Frames
             {
                 this.Top = -(this.Height) + this.ExpandContract.Height;
                 Contracted = false;
-                this.ExpandContract.Text = "vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv";
+                this.ExpandContract.Text = DefaultLanguage.Strings.GetString("BROADCAST_EXPAND_DOWN");
             }
             else
             {
                 this.Top = 0;
                 Contracted = true;
-                this.ExpandContract.Text = "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^";
+                this.ExpandContract.Text = DefaultLanguage.Strings.GetString("BROADCAST_EXPAND_UP");
             }
         }
 
@@ -325,7 +335,10 @@ namespace TopKey.Frames
 
         private void Quit_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you Sure?", "EXIT", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2) == System.Windows.Forms.DialogResult.Yes)
+            if (MessageBox.Show(DefaultLanguage.Strings.GetString("QUIT_PROMPT"),
+                DefaultLanguage.Strings.GetString("QUIT_PROMPT_TITLE"), 
+                MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, 
+                MessageBoxDefaultButton.Button2) == System.Windows.Forms.DialogResult.Yes)
             {
                 this.Close();
             }
@@ -345,10 +358,13 @@ namespace TopKey.Frames
         {
             if (Profiles.Count == 1)
             {
-                MessageBox.Show("You cannot delete the last profile!");
+                MessageBox.Show(DefaultLanguage.Strings.GetString("KEYPROFILE_DELETE_LAST"));
                 return;
             }
-            if (MessageBox.Show("Are you sure? This cannot be undone!", "DELETE CONFERM", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == System.Windows.Forms.DialogResult.Yes)
+            if (MessageBox.Show(DefaultLanguage.Strings.GetString("KEYPROFILE_DELETE_PROMPT"),
+                DefaultLanguage.Strings.GetString("KEYPROFILE_DELETE_TITLE"), 
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning,
+                MessageBoxDefaultButton.Button2) == System.Windows.Forms.DialogResult.Yes)
             {
                 if (ProfileList.SelectedIndex != -1)
                 {
@@ -389,13 +405,13 @@ namespace TopKey.Frames
         {
             SettingHotkey = !SettingHotkey;
             keyboard1.SetProfile(Profiles[ProfileList.SelectedIndex], SettingHotkey);
-            SetHotkey.BackColor = SettingHotkey ? Color.Red :  OrignalBackColor;
+            SetHotkey.BackColor = SettingHotkey ? Color.Red : OrignalBackColor;
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Hidey.Visible = true;
+            //Hidey.Visible = true;
         }
 
 

@@ -1,5 +1,5 @@
 ﻿/*
- * Copyright 2010 Matthew Cash. All rights reserved.
+ * Copyright 2020 Alice Cash. All rights reserved.
  * 
  * Redistribution and use in source and binary forms, with or without modification, are
  * permitted provided that the following conditions are met:
@@ -11,9 +11,9 @@
  *       of conditions and the following disclaimer in the documentation and/or other materials
  *       provided with the distribution.
  * 
- * THIS SOFTWARE IS PROVIDED BY Matthew Cash ``AS IS'' AND ANY EXPRESS OR IMPLIED
+ * THIS SOFTWARE IS PROVIDED BY Alice Cash ``AS IS'' AND ANY EXPRESS OR IMPLIED
  * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
- * FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL Matthew Cash OR
+ * FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL Alice Cash OR
  * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
  * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
  * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
@@ -23,7 +23,7 @@
  * 
  * The views and conclusions contained in the software and documentation are those of the
  * authors and should not be interpreted as representing official policies, either expressed
- * or implied, of Matthew Cash.
+ * or implied, of Alice Cash.
  */
 
 namespace TopKey.Frames
@@ -69,7 +69,7 @@ namespace TopKey.Frames
             this.OK.Name = "OK";
             this.OK.Size = new System.Drawing.Size(75, 23);
             this.OK.TabIndex = 0;
-            this.OK.Text = "OK";
+            this.OK.Text = "INPUT_OK";
             this.OK.UseVisualStyleBackColor = true;
             // 
             // Cancel
@@ -79,7 +79,7 @@ namespace TopKey.Frames
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(75, 23);
             this.Cancel.TabIndex = 1;
-            this.Cancel.Text = "Cancel";
+            this.Cancel.Text = "INPUT_CANCEL";
             this.Cancel.UseVisualStyleBackColor = true;
             // 
             // InputValue

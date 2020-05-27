@@ -1,5 +1,5 @@
 ﻿/*
- * Copyright 2010 Matthew Cash. All rights reserved.
+ * Copyright 2020 Alice Cash. All rights reserved.
  * 
  * Redistribution and use in source and binary forms, with or without modification, are
  * permitted provided that the following conditions are met:
@@ -11,9 +11,9 @@
  *       of conditions and the following disclaimer in the documentation and/or other materials
  *       provided with the distribution.
  * 
- * THIS SOFTWARE IS PROVIDED BY Matthew Cash ``AS IS'' AND ANY EXPRESS OR IMPLIED
+ * THIS SOFTWARE IS PROVIDED BY Alice Cash ``AS IS'' AND ANY EXPRESS OR IMPLIED
  * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
- * FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL Matthew Cash OR
+ * FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL Alice Cash OR
  * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
  * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
  * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
@@ -23,7 +23,7 @@
  * 
  * The views and conclusions contained in the software and documentation are those of the
  * authors and should not be interpreted as representing official policies, either expressed
- * or implied, of Matthew Cash.
+ * or implied, of Alice Cash.
  */
 
 namespace TopKey.Frames
@@ -80,7 +80,7 @@ namespace TopKey.Frames
             this.Remove.Name = "Remove";
             this.Remove.Size = new System.Drawing.Size(120, 23);
             this.Remove.TabIndex = 1;
-            this.Remove.Text = "Remove";
+            this.Remove.Text = "PROCESS_CONFIGURE_REMOVE";
             this.Remove.UseVisualStyleBackColor = true;
             this.Remove.Click += new System.EventHandler(this.Remove_Click);
             // 
@@ -107,7 +107,7 @@ namespace TopKey.Frames
             this.SearchButton.Name = "SearchButton";
             this.SearchButton.Size = new System.Drawing.Size(120, 23);
             this.SearchButton.TabIndex = 5;
-            this.SearchButton.Text = "Search";
+            this.SearchButton.Text = "PROCESS_CONFIGURE_SEARCH";
             this.SearchButton.UseVisualStyleBackColor = true;
             this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
             // 
@@ -117,7 +117,7 @@ namespace TopKey.Frames
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(120, 23);
             this.Add.TabIndex = 6;
-            this.Add.Text = "Add";
+            this.Add.Text = "PROCESS_CONFIGURE_ADD";
             this.Add.UseVisualStyleBackColor = true;
             this.Add.Click += new System.EventHandler(this.Add_Click);
             // 
@@ -140,7 +140,7 @@ namespace TopKey.Frames
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ProcessConfigure";
             this.ShowInTaskbar = false;
-            this.Text = "ProcessConfigure";
+            this.Text = "PROCESS_CONFIGURE_TITLE";
             this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ProcessConfigure_FormClosing);
             this.Load += new System.EventHandler(this.ProcessConfigure_Load);

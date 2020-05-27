@@ -10,6 +10,7 @@ using System.Diagnostics;
 
 using TopKey.Win32;
 using TopKey.Data;
+using TopKey.Localization;
 
 namespace TopKey.Frames
 {
@@ -18,6 +19,7 @@ namespace TopKey.Frames
         public HideFrame()
         {
             InitializeComponent();
+            SetupLocalization.SetupForm(this);
         }
 
         public static void HideBorder(Process proc)

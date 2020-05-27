@@ -7,3 +7,4 @@ packages/**
 **.suo
 *.sln.ide
 *.sln.ide/**
+.vs/*

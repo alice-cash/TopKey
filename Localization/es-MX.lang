@@ -1,0 +1,86 @@
+﻿
+﻿#-----------------------------------------------------------------------------------------------#
+# Copyright 2020 Alice Cash. All rights reserved.												#
+#																								#
+# Redistribution and use in source and binary forms, with or without modification, are			#
+# permitted provided that the following conditions are met:										#
+#																								#
+#    1. Redistributions of source code must retain the above copyright notice, this list of		#
+#       conditions and the following disclaimer.												#
+#																								#
+#    2. Redistributions in binary form must reproduce the above copyright notice, this list		#
+#       of conditions and the following disclaimer in the documentation and/or other materials	#
+#       provided with the distribution.															#
+#																								#
+# THIS SOFTWARE IS PROVIDED BY Alice Cash ``AS IS'' AND ANY EXPRESS OR IMPLIED					#
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND		#
+# FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL Alice Cash OR				#
+# CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR			#
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR		#
+# SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON		#
+# ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING			#
+# NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF			#
+# ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.													#
+#																								#
+# The views and conclusions contained in the software and documentation are those of the		#
+# authors and should not be interpreted as representing official policies, either expressed		#
+# or implied, of Alice Cash.																	#
+#-----------------------------------------------------------------------------------------------#
+
+#-----------------------------------------------------------------------------------------------#
+# Lines starting with a # are ignored															#
+# I keep a standard with lines that have variables. They use the String.Format form to make		#
+# things easy. There may be a comment before it specifying what the number may contain			#
+# within the string.																			#
+# if you use curly brackets, you must double them up											#
+# "There is only {{one}} set of brackets here. There is only a single bracket here: {{"			#
+#-----------------------------------------------------------------------------------------------#
+
+#
+# This was generated via Google Translate as a test.
+#
+
+# There are 2 special ones that should always exist
+# This is the name Presented to the user
+Language_DisplayName 		Español
+Language_Name		 		es-MX
+
+# This is the error message the user gets for a language key word not existing in the language file
+# $0 is the Name of the Localization String IE: 'English'
+Error_No_Local 				No hay localización para el '{0}'
+
+
+PROCESS_CONFIGURE_TITLE		Configurar programas
+PROCESS_CONFIGURE_REMOVE	Suprimir
+PROCESS_CONFIGURE_SEARCH	Buscar
+PROCESS_CONFIGURE_ADD		Añadir
+
+INPUT_OK					Okay
+INPUT_CANCEL				Cancelar
+
+HIDEFRAME_TITLE				Selector de fotogramas ocultos
+
+BROADCAST_SETUP_HELP	    Haga clic en las teclas para cambiar su estado. Las teclas que se emiten son de color azul.
+#BROADCAST_SETUP_HELP_BLUE	Blue
+BROADCAST_CONFIGURE_PROCESS	Configurar programas
+BROADCAST_CONFIGURE_HIDEBOR Ocultar fronteras
+BROADCAST_CONFIGURE_HOTKEY	Tecla de acceso directo
+BROADCAST_CONFIGURE_NEW		Nuevo
+BROADCAST_CONFIGURE_SAVEALL	Salvar a todos
+BROADCAST_CONFIGURE_DELETE	Eliminar
+
+BROADCAST_EXPAND_DOWN		vvvvvvvv Haga clic aquí para mostrar vvvvvvvv
+BROADCAST_EXPAND_UP			^^^^^^^ Haga clic aquí para esconderse ^^^^^^^
+
+KEYPROFILE_CHANGED			{0} seleccionado.
+KEYPROFILE_NEW_NAME			Por favor ingrese un nuevo nombre de perfil.
+KEYPROFILE_INVALID_CHAR		El nombre no debe contener ninguno de los siguientes caracteres: {0}
+KEYPROFILE_SAVE_ERR			Hay un posible error de permiso de archivo / carpeta. Compruebe el permiso de lectura / escritura de la subcarpeta 'Profiles'.
+KEYPROFILE_IO_ERROR			Se produjo un error al cargar el perfil de clave predeterminado. Si ve este mensaje repetidamente, hay un error con la plantilla de perfil predeterminada o error de permiso de archivo.
+KEYPROFILE_IO_ERROR_TITLE	Error!
+KEYPROFILE_DELETE_LAST		¡No puedes borrar el último perfil!
+KEYPROFILE_DELETE_PROMPT	¿Estás seguro? ¡Esto no se puede deshacer!
+KEYPROFILE_DELETE_TITLE		BORRAR CONFIRMAR
+
+QUIT_PROMPT_TITLE			¿Salida?
+QUIT_PROMPT					¿Estás seguro de que deseas dejar de fumar?
